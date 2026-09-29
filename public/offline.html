@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mode Offline - MAI HRIS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 40px 32px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    }
+    .icon-wrapper {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      background: #eff6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-wrapper svg {
+      width: 36px;
+      height: 36px;
+      stroke: #2563eb;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+    p {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: #fef3c7;
+      color: #b45309;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      background: #2563eb;
+      color: #ffffff;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .brand-sub {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M10.5 10.5a5 5 0 017.07 0M7 7a10 10 0 0114.14 0M1.42 9a15 15 0 018.08-4.5M12 19h.01M8.5 15.5a5 5 0 013.5-1.5" />
+      </svg>
+    </div>
+    <span class="badge">Koneksi Terputus</span>
+    <h1>Anda Sedang Offline</h1>
+    <p>
+      Sistem mendeteksi perangkat Anda sedang tidak terhubung ke jaringan internet. Halaman ini disimpan dalam cache lokal PWA MAI HRIS.
+    </p>
+    <button class="btn" onclick="window.location.reload()">
+      Coba Sambungkan Ulang
+    </button>
+    <div class="brand-sub">
+      PT. Mitra Akses Insani — HRIS Portal
+    </div>
+  </div>
+</body>
+</html>
