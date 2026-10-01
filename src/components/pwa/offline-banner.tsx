@@ -26,8 +26,8 @@ export function OfflineBanner() {
   if (!isOffline) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 flex items-center gap-2.5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-2.5 text-xs font-medium text-amber-900 shadow-lg backdrop-blur-md">
-      <WifiOff className="h-4 w-4 text-amber-600 animate-pulse" />
+    <div className="fixed bottom-4 left-4 z-50 flex items-center gap-2.5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-2.5 text-xs font-medium text-amber-900">
+      <WifiOff className="h-4 w-4 text-amber-600" />
       <span>Anda sedang offline. Data ditampilkan dari cache lokal.</span>
     </div>
   );

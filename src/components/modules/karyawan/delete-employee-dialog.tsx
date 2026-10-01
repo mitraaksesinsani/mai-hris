@@ -51,7 +51,7 @@ export function DeleteEmployeeDialog({
           <DialogDescription>
             Apakah Anda yakin ingin menghapus data karyawan{" "}
             <span className="font-semibold text-foreground">{karyawan.nama}</span> (NIK:{" "}
-            <span className="font-mono text-foreground">{karyawan.nik}</span>)?
+            <span className="font-medium text-foreground">{karyawan.nik}</span>)?
             <br />
             <br />
             Tindakan ini akan menghapus seluruh data relasi termasuk riwayat posisi, slip gaji,

@@ -54,7 +54,7 @@ export default function PosisiPage() {
         <AddPositionDialog />
       </div>
 
-      <Card className="border-border shadow-xs">
+      <Card className="border-border">
         <CardHeader className="pb-3 border-b border-border">
           <CardTitle className="text-sm font-semibold text-foreground flex items-center gap-2">
             <Briefcase className="h-3.5 w-3.5 text-foreground" />
@@ -85,7 +85,7 @@ export default function PosisiPage() {
                       {pos.nama_posisi}
                     </TableCell>
                     <TableCell>
-                      <Badge variant="outline" className="text-[10px] font-mono">
+                      <Badge variant="outline" className="text-[10px]">
                         {pos.level_posisi}
                       </Badge>
                     </TableCell>

@@ -78,7 +78,7 @@ export function EmployeeTable({ data, isLoading }: EmployeeTableProps) {
       </div>
 
       {/* Table Container */}
-      <div className="rounded-lg border border-border bg-card shadow-xs overflow-hidden">
+      <div className="rounded-lg border border-border bg-card overflow-hidden">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -142,7 +142,7 @@ export function EmployeeTable({ data, isLoading }: EmployeeTableProps) {
         <div className="flex items-center justify-between border-t border-border px-4 py-2.5 text-xs text-muted-foreground bg-muted/20">
           <div>
             Menampilkan{" "}
-            <span className="font-semibold font-mono text-foreground">
+            <span className="font-semibold text-foreground">
               {table.getFilteredRowModel().rows.length}
             </span>{" "}
             total karyawan

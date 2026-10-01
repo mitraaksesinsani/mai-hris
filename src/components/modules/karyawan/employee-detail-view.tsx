@@ -60,10 +60,10 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
   return (
     <div className="space-y-5">
       {/* Profile Header Banner using Shadcn Card & Avatar */}
-      <div className="relative overflow-hidden rounded-xl bg-card border border-border p-5 shadow-xs">
+      <div className="relative overflow-hidden rounded-xl bg-card border border-border p-5">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <Avatar className="h-14 w-14 rounded-lg border border-border shadow-xs">
+            <Avatar className="h-14 w-14 rounded-lg border border-border">
               <AvatarFallback className="bg-primary text-lg font-bold text-primary-foreground rounded-lg">
                 {initials}
               </AvatarFallback>
@@ -76,7 +76,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                 </Badge>
               </div>
               <div className="flex flex-wrap items-center gap-2.5 mt-0.5 text-xs text-muted-foreground">
-                <span className="font-mono font-medium text-foreground">{karyawan.nik}</span>
+                <span className="font-medium text-foreground">{karyawan.nik}</span>
                 <span>•</span>
                 <span className="flex items-center gap-1">
                   <Briefcase className="h-3.5 w-3.5 text-muted-foreground" />
@@ -126,7 +126,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
 
         {/* Tab 1: Biodata */}
         <TabsContent value="biodata" className="mt-4">
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3 flex flex-row items-center justify-between">
               <div>
                 <CardTitle className="text-sm font-semibold">Informasi Biodata & Penempatan</CardTitle>
@@ -146,7 +146,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 text-xs">
                 <div>
                   <span className="text-muted-foreground font-medium">Nomor Induk Karyawan (NIK)</span>
-                  <p className="text-xs font-semibold font-mono text-foreground mt-0.5">{karyawan.nik}</p>
+                  <p className="text-xs font-semibold text-foreground mt-0.5">{karyawan.nik}</p>
                 </div>
                 <div>
                   <span className="text-muted-foreground font-medium">Email Kantor</span>
@@ -194,7 +194,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
         {/* Tab 2: Data Pendukung (Alamat, Pendidikan, Pengalaman) */}
         <TabsContent value="pendukung" className="mt-4 space-y-4">
           {/* Alamat */}
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3 flex flex-row items-center justify-between">
               <CardTitle className="text-sm font-semibold flex items-center gap-2">
                 <MapPin className="h-3.5 w-3.5 text-foreground" />
@@ -243,7 +243,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
           </Card>
 
           {/* Pendidikan */}
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3 flex flex-row items-center justify-between">
               <CardTitle className="text-sm font-semibold flex items-center gap-2">
                 <GraduationCap className="h-3.5 w-3.5 text-foreground" />
@@ -297,7 +297,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
           </Card>
 
           {/* Pengalaman Kerja */}
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3 flex flex-row items-center justify-between">
               <CardTitle className="text-sm font-semibold flex items-center gap-2">
                 <Briefcase className="h-3.5 w-3.5 text-foreground" />
@@ -321,7 +321,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="font-semibold text-foreground">{exp.posisi}</span>
-                          <span className="text-muted-foreground font-mono text-[11px]">
+                          <span className="text-muted-foreground text-[11px]">
                             {formatDate(exp.periode_mulai)} s/d {exp.periode_selesai ? formatDate(exp.periode_selesai) : "Sekarang"}
                           </span>
                         </div>
@@ -353,7 +353,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
 
         {/* Tab 3: Riwayat Posisi */}
         <TabsContent value="posisi" className="mt-4">
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-semibold flex items-center gap-2">
                 <History className="h-3.5 w-3.5 text-foreground" />
@@ -369,12 +369,12 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                   {karyawan.riwayat_posisi.map((rp) => (
                     <div key={rp.id_riwayat_posisi} className="relative pl-5">
                       <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" />
-                      <div className="rounded-lg border border-border bg-card p-3 shadow-2xs">
+                      <div className="rounded-lg border border-border bg-card p-3">
                         <div className="flex items-center justify-between">
                           <h4 className="font-semibold text-xs text-foreground">
                             {rp.posisi?.nama_posisi || "Posisi"}
                           </h4>
-                          <span className="text-[11px] font-mono text-muted-foreground">
+                          <span className="text-[11px] text-muted-foreground">
                             {formatDate(rp.tgl_mulai)} — {rp.tgl_selesai ? formatDate(rp.tgl_selesai) : "Sekarang"}
                           </span>
                         </div>
@@ -392,7 +392,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
 
         {/* Tab 4: Riwayat Gaji */}
         <TabsContent value="gaji" className="mt-4">
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between">
                 <div>
@@ -418,25 +418,25 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                     return (
                       <div key={g.id_riwayat_gaji} className="rounded-lg border border-border bg-muted/30 p-3">
                         <div className="flex items-center justify-between border-b border-border pb-1.5 mb-2">
-                          <span className="text-xs font-mono text-muted-foreground">
+                          <span className="text-xs text-muted-foreground">
                             Periode: {formatDate(g.tgl_mulai)} — {g.tgl_selesai ? formatDate(g.tgl_selesai) : "Berlaku Saat Ini"}
                           </span>
-                          <span className="text-xs font-mono font-semibold text-foreground">
+                          <span className="text-xs font-semibold text-foreground">
                             THP: {formatRupiah(totalTHP)}
                           </span>
                         </div>
                         <div className="grid grid-cols-3 gap-3 text-xs">
                           <div>
                             <span className="text-muted-foreground text-[11px]">Gaji Pokok</span>
-                            <p className="font-mono font-medium text-foreground">{formatRupiah(g.gaji_pokok)}</p>
+                            <p className="font-medium text-foreground">{formatRupiah(g.gaji_pokok)}</p>
                           </div>
                           <div>
                             <span className="text-muted-foreground text-[11px]">Tunjangan Tetap</span>
-                            <p className="font-mono font-medium text-foreground">{formatRupiah(g.tunjangan)}</p>
+                            <p className="font-medium text-foreground">{formatRupiah(g.tunjangan)}</p>
                           </div>
                           <div>
                             <span className="text-muted-foreground text-[11px]">Potongan</span>
-                            <p className="font-mono font-medium text-destructive">-{formatRupiah(g.potongan)}</p>
+                            <p className="font-medium text-destructive">-{formatRupiah(g.potongan)}</p>
                           </div>
                         </div>
                       </div>
@@ -452,7 +452,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
 
         {/* Tab 5: Dokumen Storage Terproteksi */}
         <TabsContent value="dokumen" className="mt-4">
-          <Card className="border-border shadow-xs">
+          <Card className="border-border">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-semibold flex items-center gap-2">
                 <FileText className="h-3.5 w-3.5 text-foreground" />
@@ -468,7 +468,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                 <div className="rounded-lg border border-border bg-card p-3 space-y-2.5">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-foreground">KTP</span>
-                    <Badge variant="outline" className="text-[10px] font-mono">PDF/IMG</Badge>
+                    <Badge variant="outline" className="text-[10px]">PDF/IMG</Badge>
                   </div>
                   <p className="text-muted-foreground text-[11px]">Identitas kependudukan nasional</p>
                   <Button variant="outline" size="sm" className="w-full gap-1.5 text-xs h-7">
@@ -481,7 +481,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                 <div className="rounded-lg border border-border bg-card p-3 space-y-2.5">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-foreground">Surat Kontrak</span>
-                    <Badge variant="outline" className="text-[10px] font-mono">PDF</Badge>
+                    <Badge variant="outline" className="text-[10px]">PDF</Badge>
                   </div>
                   <p className="text-muted-foreground text-[11px]">Kontrak kerja resmi (PKWT/PKWTT)</p>
                   <Button variant="outline" size="sm" className="w-full gap-1.5 text-xs h-7">
@@ -494,7 +494,7 @@ export function EmployeeDetailView({ karyawan }: EmployeeDetailViewProps) {
                 <div className="rounded-lg border border-border bg-card p-3 space-y-2.5">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-foreground">Pas Foto</span>
-                    <Badge variant="outline" className="text-[10px] font-mono">JPG/PNG</Badge>
+                    <Badge variant="outline" className="text-[10px]">JPG/PNG</Badge>
                   </div>
                   <p className="text-muted-foreground text-[11px]">Foto background merah / biru</p>
                   <Button variant="outline" size="sm" className="w-full gap-1.5 text-xs h-7">

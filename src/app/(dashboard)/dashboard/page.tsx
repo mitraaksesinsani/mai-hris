@@ -31,14 +31,14 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Banner - Shadcn-Mira High-Density Style */}
-      <div className="relative overflow-hidden rounded-xl border border-border bg-card p-6 shadow-xs">
+      <div className="relative overflow-hidden rounded-xl border border-border bg-card p-6">
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="max-w-2xl space-y-1.5">
             <div className="flex items-center gap-2">
               <Badge variant="outline" className="text-[10px] font-medium tracking-wide">
                 PT. Mitra Akses Insani (MAI)
               </Badge>
-              <Badge variant="secondary" className="text-[10px] font-mono">
+              <Badge variant="secondary" className="text-[10px]">
                 HRIS Enterprise
               </Badge>
             </div>
@@ -64,7 +64,7 @@ export default function DashboardPage() {
       {/* Metrics Grid */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {/* Metric 1 */}
-        <Card className="shadow-xs border-border">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between pb-1 space-y-0">
             <CardTitle className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
               Total Karyawan
@@ -74,7 +74,7 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono tracking-tight text-foreground">{totalEmployees}</div>
+            <div className="text-2xl font-bold tracking-tight text-foreground">{totalEmployees}</div>
             <p className="text-[11px] text-muted-foreground flex items-center gap-1 mt-0.5">
               <TrendingUp className="h-3 w-3 text-emerald-600 dark:text-emerald-400" />
               <span>Semua divisi & unit</span>
@@ -83,7 +83,7 @@ export default function DashboardPage() {
         </Card>
 
         {/* Metric 2 */}
-        <Card className="shadow-xs border-border">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between pb-1 space-y-0">
             <CardTitle className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
               Karyawan Aktif
@@ -93,13 +93,13 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono tracking-tight text-foreground">{activeEmployees}</div>
+            <div className="text-2xl font-bold tracking-tight text-foreground">{activeEmployees}</div>
             <p className="text-[11px] text-muted-foreground mt-0.5">Status Tetap & Kontrak</p>
           </CardContent>
         </Card>
 
         {/* Metric 3 */}
-        <Card className="shadow-xs border-border">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between pb-1 space-y-0">
             <CardTitle className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
               Unit Organisasi
@@ -109,13 +109,13 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono tracking-tight text-foreground">{totalOrgs}</div>
+            <div className="text-2xl font-bold tracking-tight text-foreground">{totalOrgs}</div>
             <p className="text-[11px] text-muted-foreground mt-0.5">Direktorat, Divisi & Unit</p>
           </CardContent>
         </Card>
 
         {/* Metric 4 */}
-        <Card className="shadow-xs border-border">
+        <Card className="border-border">
           <CardHeader className="flex flex-row items-center justify-between pb-1 space-y-0">
             <CardTitle className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
               Master Posisi
@@ -125,7 +125,7 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold font-mono tracking-tight text-foreground">{totalPositions}</div>
+            <div className="text-2xl font-bold tracking-tight text-foreground">{totalPositions}</div>
             <p className="text-[11px] text-muted-foreground mt-0.5">Level jabatan & tugas</p>
           </CardContent>
         </Card>
@@ -134,7 +134,7 @@ export default function DashboardPage() {
       {/* Main Sections Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Quick Karyawan List */}
-        <Card className="lg:col-span-2 shadow-xs border-border">
+        <Card className="lg:col-span-2 border-border">
           <CardHeader className="flex flex-row items-center justify-between pb-3">
             <div>
               <CardTitle className="text-sm font-semibold text-foreground">
@@ -179,7 +179,7 @@ export default function DashboardPage() {
         </Card>
 
         {/* Database & Security Info Card */}
-        <Card className="shadow-xs border-border">
+        <Card className="border-border">
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-semibold text-foreground flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />

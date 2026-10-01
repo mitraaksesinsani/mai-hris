@@ -87,7 +87,7 @@ export function AddEmployeeDialog() {
           </DialogHeader>
 
           {successMsg && (
-            <div className="flex items-center gap-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 p-3 text-xs text-emerald-600 dark:text-emerald-400 animate-in fade-in">
+            <div className="flex items-center gap-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 p-3 text-xs text-emerald-600 dark:text-emerald-400">
               <CheckCircle2 className="h-4 w-4 shrink-0" />
               <span className="font-medium">{successMsg}</span>
             </div>

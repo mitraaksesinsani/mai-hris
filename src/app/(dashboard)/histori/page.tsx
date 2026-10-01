@@ -49,7 +49,7 @@ export default function HistoriPage() {
         <AddHistoryDialog />
       </div>
 
-      <Card className="border-border shadow-xs">
+      <Card className="border-border">
         <CardHeader className="pb-3 border-b border-border">
           <CardTitle className="text-sm font-semibold text-foreground flex items-center gap-2">
             <History className="h-3.5 w-3.5 text-foreground" />
@@ -85,14 +85,14 @@ export default function HistoriPage() {
                       <div className="font-medium text-foreground text-xs">
                         {item.nama || "Karyawan"}
                       </div>
-                      <div className="text-[11px] text-muted-foreground font-mono">
+                      <div className="text-[11px] text-muted-foreground">
                         {item.nik || "-"}
                       </div>
                     </TableCell>
                     <TableCell className="text-xs text-foreground">
                       <span className="font-medium">{item.nama_posisi || "-"}</span>
                       {item.level_posisi && (
-                        <span className="text-[10px] text-muted-foreground font-mono ml-1.5">
+                        <span className="text-[10px] text-muted-foreground ml-1.5">
                           ({item.level_posisi})
                         </span>
                       )}

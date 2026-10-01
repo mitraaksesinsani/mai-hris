@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import { FolderGit2, Lock, User, AlertCircle, ArrowRight, ShieldCheck, KeyRound } from "lucide-react";
 
 export default function LoginPage() {
@@ -65,9 +66,16 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-sm space-y-5">
         {/* Brand Header */}
-        <div className="flex flex-col items-center text-center space-y-1.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-xs">
-            <FolderGit2 className="h-5 w-5" />
+        <div className="flex flex-col items-center text-center space-y-2">
+          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-border bg-card">
+            <Image
+              src="/logo.png"
+              alt="MAI HRIS"
+              width={48}
+              height={48}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
           <h1 className="font-heading text-xl font-bold tracking-tight text-foreground">
             MAI HRIS Portal
@@ -78,7 +86,7 @@ export default function LoginPage() {
         </div>
 
         {/* Quick Demo Access Action */}
-        <div className="rounded-lg border border-border bg-muted/40 p-3 shadow-2xs">
+        <div className="rounded-lg border border-border bg-muted/40 p-3">
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
               <div className="flex h-7 w-7 items-center justify-center rounded-md bg-muted text-foreground border border-border">
@@ -86,7 +94,7 @@ export default function LoginPage() {
               </div>
               <div className="text-left">
                 <p className="text-xs font-semibold text-foreground">Kredensial Default</p>
-                <p className="text-[11px] text-muted-foreground font-mono">admin &nbsp;|&nbsp; 123</p>
+                <p className="text-[11px] text-muted-foreground">admin &nbsp;|&nbsp; 123</p>
               </div>
             </div>
             <Button
@@ -103,7 +111,7 @@ export default function LoginPage() {
         </div>
 
         {/* Login Card */}
-        <Card className="border-border shadow-xs">
+        <Card className="border-border">
           <CardHeader className="space-y-1 pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-base font-semibold text-foreground">Masuk ke Akun</CardTitle>
@@ -175,7 +183,7 @@ export default function LoginPage() {
               <p className="font-medium text-foreground">Akun Terdaftar di SQLite:</p>
               <div className="mt-1.5 flex items-center justify-between rounded-md bg-card p-1.5 border border-border text-[11px]">
                 <span className="font-medium text-foreground">Administrator</span>
-                <span className="font-mono text-muted-foreground">admin / 123</span>
+                <span className="text-muted-foreground">admin / 123</span>
               </div>
             </div>
           </CardContent>

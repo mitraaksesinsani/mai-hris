@@ -1,11 +1,11 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-sans: var(--font-sans);
   --font-heading: var(--font-sans);
+  --font-mono: var(--font-sans);
   --radius-xs: calc(var(--radius) * 0.5);
   --radius-sm: calc(var(--radius) * 0.7);
   --radius-md: var(--radius);
@@ -134,4 +134,28 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: oklch(0.6 0 0);
+}
+
+/* Nonaktifkan semua efek animasi/transisi berlebih (slide in/out, fade, zoom) */
+[data-slot="dialog-content"],
+[data-slot="dialog-overlay"],
+[data-slot="dropdown-menu-content"],
+[data-slot="dropdown-menu-sub-content"],
+[data-slot="select-content"],
+[data-slot="popover-content"] {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Hilangkan seluruh font monospace dan gunakan font normal (sans) */
+.font-mono, code, kbd, samp, pre {
+  font-family: var(--font-sans) !important;
+}
+
+/* Hilangkan semua efek shadow di semua menu dan fitur */
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
 }

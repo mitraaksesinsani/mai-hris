@@ -58,7 +58,7 @@ export function OrgHierarchy() {
           const rootPositions = positions?.filter((p) => p.id_organisasi === root.id_organisasi) || [];
 
           return (
-            <Card key={root.id_organisasi} className="border-border shadow-xs">
+            <Card key={root.id_organisasi} className="border-border">
               <CardHeader className="bg-muted/30 border-b border-border pb-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -105,7 +105,7 @@ export function OrgHierarchy() {
                         >
                           <Briefcase className="h-3 w-3 text-muted-foreground" />
                           <span>{pos.nama_posisi}</span>
-                          <span className="text-[10px] text-muted-foreground font-mono">({pos.level_posisi})</span>
+                          <span className="text-[10px] text-muted-foreground">({pos.level_posisi})</span>
                         </div>
                       ))}
                     </div>

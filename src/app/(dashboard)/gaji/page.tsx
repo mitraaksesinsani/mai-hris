@@ -61,7 +61,7 @@ export default function GajiPage() {
         </div>
       </div>
 
-      <Card className="border-border shadow-xs">
+      <Card className="border-border">
         <CardHeader className="pb-3 border-b border-border">
           <CardTitle className="text-sm font-semibold text-foreground flex items-center gap-2">
             <BadgeDollarSign className="h-3.5 w-3.5 text-foreground" />
@@ -98,7 +98,7 @@ export default function GajiPage() {
                         <div className="font-medium text-foreground text-xs">
                           {item.nama || "Karyawan"}
                         </div>
-                        <div className="text-[11px] text-muted-foreground font-mono">
+                        <div className="text-[11px] text-muted-foreground">
                           {item.nik || "-"}
                         </div>
                       </TableCell>
@@ -108,16 +108,16 @@ export default function GajiPage() {
                       <TableCell className="text-xs text-muted-foreground">
                         {formatDate(item.tgl_mulai)} s/d {item.tgl_selesai ? formatDate(item.tgl_selesai) : "Sekarang"}
                       </TableCell>
-                      <TableCell className="text-xs font-mono text-foreground">
+                      <TableCell className="text-xs text-foreground">
                         {formatRupiah(item.gaji_pokok)}
                       </TableCell>
-                      <TableCell className="text-xs font-mono text-foreground">
+                      <TableCell className="text-xs text-foreground">
                         {formatRupiah(item.tunjangan)}
                       </TableCell>
-                      <TableCell className="text-xs font-mono text-destructive">
+                      <TableCell className="text-xs text-destructive">
                         -{formatRupiah(item.potongan)}
                       </TableCell>
-                      <TableCell className="text-right text-xs font-mono font-semibold text-foreground">
+                      <TableCell className="text-right text-xs font-semibold text-foreground">
                         {formatRupiah(thp)}
                       </TableCell>
                       <TableCell className="text-right">

@@ -76,7 +76,7 @@ export const employeeColumns: ColumnDef<KaryawanWithRelations>[] = [
     accessorKey: "nik",
     header: "NIK",
     cell: ({ row }) => (
-      <span className="font-mono text-xs font-semibold text-foreground">
+      <span className="text-xs font-semibold text-foreground">
         {row.getValue("nik")}
       </span>
     ),
